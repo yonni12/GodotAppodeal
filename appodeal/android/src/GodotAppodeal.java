@@ -62,7 +62,7 @@ public class GodotAppodeal extends Godot.SingletonBase
   }
 
   //initialization of appodeal
-  public void init(final int new_instanceId, final String key, final String type, final boolean is_testing)
+  public void init(final int new_instanceId, final String key, final String type, final boolean is_testing, final boolean logging)
   {
     instanceId = new_instanceId;
     testing = is_testing;
@@ -76,8 +76,9 @@ public class GodotAppodeal extends Godot.SingletonBase
         if(testing)
         {
           Appodeal.setTesting(true);
-          Appodeal.setLogging(true);
         }
+
+        Appodeal.setLogging(logging);
 
         if(type.equals("banner"))
         {
