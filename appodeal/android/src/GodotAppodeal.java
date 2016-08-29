@@ -76,6 +76,7 @@ public class GodotAppodeal extends Godot.SingletonBase
         if(testing)
         {
           Appodeal.setTesting(true);
+          Appodeal.setLogging(true);
         }
 
         if(type.equals("banner"))
